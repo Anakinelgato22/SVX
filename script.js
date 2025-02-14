@@ -1,7 +1,5 @@
 const siButton = document.getElementById('siButton');
 const noButton = document.getElementById('noButton');
-const message = document.getElementById('message');
-const gif = document.getElementById('gif');
 const pregunta = document.getElementById('pregunta');
 const sabiaQueDiriasQueSi = document.getElementById('sabiaQueDiriasQueSi');
 const verInvitacionButton = document.getElementById('verInvitacionButton');
@@ -25,8 +23,8 @@ const gifs = [
 
 noButton.addEventListener('click', () => {
     if (noCount < messages.length) {
-        message.textContent = messages[noCount]; // Actualiza el mensaje
-        gif.src = gifs[noCount]; // Cambia el GIF
+        pregunta.querySelector('h1').textContent = messages[noCount];
+        pregunta.querySelector('.osito').src = gifs[noCount];
         noCount++;
     } else {
         noButton.style.display = 'none'; // Oculta el botón "No" después de 3 intentos
